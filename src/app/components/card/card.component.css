@@ -20,6 +20,14 @@
   margin-left: auto;
   margin-right: auto;
   height: 70%;
+  margin: auto;
+}
+.card__body img{
+
+display: flex;
+align-items: center;
+justify-content: center;
+height: 200px;
 }
 .card__title{
 
@@ -44,4 +52,33 @@
   border-radius: 5px;
   padding: 5px;
   margin-right: 4px;
+  margin-bottom: 5px;
 }
+.card__inputPoke input{
+margin-right: 0;
+border: none;
+padding: 2px;
+
+
+}
+.card__inputPoke {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+
+
+.card__inputPokeinput[type="text"] {
+  flex: 1;
+}
+
+.card__inputPoke button {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  padding: 2px;
+}
+

@@ -8,6 +8,9 @@ import { PokemonService } from 'src/app/services/pokemon.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
+
+  pokemonName:string = "pikachu";
+
   pokemon: PokemonData ={
     id: 0,
     name: "",
@@ -18,10 +21,18 @@ export class CardComponent implements OnInit {
 
   constructor(
     private service: PokemonService
-  ) { }
+  ) {
+
+
+
+   }
 
   ngOnInit(): void {
-    this.service.getPokemon("pikachu")
+    this.getPokemon();
+  }
+  getPokemon() {
+
+    this.service.getPokemon(this.pokemonName.toLowerCase())
     .subscribe(
       {
         next:(res) => {
@@ -42,6 +53,8 @@ export class CardComponent implements OnInit {
 
       }
     )
+
+
   }
 
 }
